@@ -300,6 +300,7 @@ nav .btn2 {
   font-weight: bold;
 }
 
+
 @media (max-width: 1024px) {
   nav .search-form {
     /* 390 */
@@ -395,6 +396,7 @@ nav .btn2 {
     position: relative;
   }
 }
+
 @media (max-width: 900px) {
   .main-courses .courses .course-card {
     margin-right: calc(70vw - 516px);
@@ -411,7 +413,7 @@ nav .btn2 {
 }
 
 @media (max-width: 800px) {
-  .fa-cart-shopping ,.rightSide , .fa-cart-shopping {
+  .fa-cart-shopping , .rightSide , .fa-cart-shopping {
     display: none;
   }
   nav {
@@ -420,8 +422,7 @@ nav .btn2 {
     flex-direction: row;
   }
   nav .leftSide{
-    position: relative;
-    right: 0px;
+    margin-left: calc(100vw - 200px);
   }
   }
 /*  middle  */
@@ -563,8 +564,7 @@ nav .btn2 {
   .main-courses .courses .course-card h3 {
     font-size: 18px;
   }
-   
-
+  
   .main-courses .courses .btn {
      
     margin-bottom: 35px;
