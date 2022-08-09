@@ -413,7 +413,7 @@ nav .btn2 {
 }
 
 @media (max-width: 800px) {
-  .fa-cart-shopping , .rightSide , .fa-cart-shopping {
+  .fa-cart-shopping , .rightSide   {
     display: none;
   }
   nav {
