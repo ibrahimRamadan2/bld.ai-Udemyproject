@@ -421,6 +421,7 @@ nav .btn2 {
     justify-content: flex-start;
     flex-direction: row;
   }
+  /* here is the bug  */
   nav .leftSide{
     margin-left: calc(100vw - 200px);
   }
