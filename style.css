@@ -588,3 +588,18 @@ nav .btn2 {
     font-size: 22px;
 }
 }
+
+@media (max-width : 365px) {
+  .main-courses .courses .course-card {
+    width: 236px;
+    height: 252px;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+
+  .main-courses .courses .course-card .course-img-div {
+    width: inherit;
+    height: 147px;
+}
+  
+}
