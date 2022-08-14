@@ -36,10 +36,7 @@ nav p {
 nav p:hover {
   color: rgb(91, 36, 208);
 }
-nav .navp:hover {
-  color: rgb(91, 36, 208);
-}
-nav p:hover {
+nav .logo:hover {
   color: black;
 }
 .logo {
@@ -122,7 +119,7 @@ nav .btn2 {
 .container .Head-container {
   min-width: 90px;
   height: 443px;
-  background-image: url("images/header.jpg");
+  background-image: url(images/nav/header.jpg);
   margin-right: auto;
   /* border: 5px solid; */
   margin: auto;
@@ -234,7 +231,7 @@ nav .btn2 {
   height: 120px;
 }
 .main-courses .courses .course-card .course-img-div {
-  width: 226px;
+  width: inherit;
   height: 120px;
 }
 .main-courses .courses .course-card h3 {
@@ -245,7 +242,7 @@ nav .btn2 {
 .main-courses .courses .Cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .main-courses .courses .Cards .course-card .star-icon {
@@ -301,6 +298,32 @@ nav .btn2 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*            media Query        */
+
 @media (max-width: 1024px) {
   nav .search-form {
     /* 390 */
@@ -318,7 +341,7 @@ nav .btn2 {
   }
   .container .Head-container {
     height: 443px;
-    background-image: url("images/header.jpg");
+    background-image: url(images/nav/header.jpg);
 
     /* border: 5px solid; */
 
@@ -335,8 +358,9 @@ nav .btn2 {
   .main-courses .courses .Cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    
   }
   .main-courses .courses .course-card {
     width: 200px;
@@ -361,7 +385,7 @@ nav .btn2 {
     margin-right: 5px;
   }
   .main-courses .courses .course-card .course-img-div {
-    width: 255px;
+    width: inherit;
     height: 131px;
   }
   .main-courses .courses .course-card h3 {
@@ -390,7 +414,8 @@ nav .btn2 {
   }
   .container .Head-container {
     height: 407px;
-    background-image: url(images/header2.jpg);
+    
+    background-image: url(images/nav/header2.jpg);
     background-size: auto;
     /* border: 5px solid; */
     position: relative;
@@ -413,7 +438,7 @@ nav .btn2 {
 }
 
 @media (max-width: 800px) {
-  nav .rightSide   {
+  nav .rightSide {
     display: none;
   }
   nav {
@@ -422,10 +447,10 @@ nav .btn2 {
     flex-direction: row;
   }
   /* here is the bug  */
-  nav .leftSide{
+  nav .leftSide {
     margin-left: calc(100vw - 200px);
   }
-  }
+}
 /*  middle  */
 @media (max-width: 800px) {
   .container {
@@ -464,7 +489,7 @@ nav .btn2 {
   }
   .container .Head-container {
     height: 370px;
-    background-image: url(images/header3.jpg);
+    background-image: url(images/nav/header3.jpg);
   }
   .container .card {
     height: 187px;
@@ -522,7 +547,7 @@ nav .btn2 {
     width: 209px;
     height: 240px;
     margin-right: calc(103vw - 614px);
-}
+  }
 }
 @media (max-width: 620px) {
   .main-courses .courses .course-card {
@@ -530,29 +555,29 @@ nav .btn2 {
     height: 240px;
     margin-right: calc(108vw - 614px);
   }
-  .container .card{
+  .container .card {
     display: none;
   }
   .container .Head-container {
     height: 370px;
-    background-image: url(images/header5.jpg);
+    background-image: url(images/nav/header5.jpg);
   }
 }
 
 
 @media (max-width: 580px) {
-  
+
   .main-courses .courses .course-card {
-      width: 341px;
-      height: 240px;
-      margin-right: calc(108vw - 614px);
+    width: 341px;
+    height: 240px;
+    margin-right: calc(108vw - 614px);
   }
 
   .main-courses .courses .Cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
-     align-content: center;
+    align-content: center;
   }
 
   .main-courses .courses .course-card .course-img-div {
@@ -565,16 +590,15 @@ nav .btn2 {
   .main-courses .courses .course-card h3 {
     font-size: 18px;
   }
-  
+
   .main-courses .courses .btn {
-     
     margin-bottom: 35px;
   }
   .main-courses .courses .course-card {
-    width: calc(100vw - 210px );
+    width: calc(100vw - 210px);
     height: 242px;
     margin-right: calc(108vw - 614px);
-}
+  }
   .main-courses .courses .course-card {
     width: 303px;
     height: 242px;
@@ -586,10 +610,10 @@ nav .btn2 {
   }
   .main-courses .courses h2 {
     font-size: 22px;
-}
+  }
 }
 
-@media (max-width : 365px) {
+@media (max-width: 365px) {
   .main-courses .courses .course-card {
     width: 236px;
     height: 252px;
@@ -600,6 +624,5 @@ nav .btn2 {
   .main-courses .courses .course-card .course-img-div {
     width: inherit;
     height: 147px;
-}
-  
+  }
 }
