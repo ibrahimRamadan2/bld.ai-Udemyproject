@@ -1,0 +1,126 @@
+{
+    "body":{
+        "courses":[
+            {
+                "id":"1" , 
+                "name":"Learn python in 3 minutes without root my brother", 
+                "image":"../images/courses/python/1.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" , 
+                "studentNumber" : "234", 
+                "price":"10.99" , 
+                "sellingTag":"Bestseller" 
+            },
+            {
+                "id":"2" , 
+                "name":"The Complete Programming Fundamentals Course -Python[Arabic]", 
+                "image":"../images/courses/python/2.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" ,  
+                "studentNumber" : "234",
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"3" , 
+                "name":"Python For Beginners [in Arabic]", 
+                "image":"../images/courses/python/3.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" ,  
+                "studentNumber" : "234",
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"4" , 
+                "name":" Data Science and Machine Learning Bootcamp with R", 
+                "image":"../images/courses/datascience/1.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" , 
+                "studentNumber" : "234", 
+                "price":"10.99" , 
+                "sellingTag":"New" 
+            },
+            {
+                "id":"5" , 
+                "name":"Data Science: Deep Learning and Neural Networks in Python", 
+                "image":"../images/courses/datascience/2.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" , 
+                "studentNumber" : "234", 
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"6" , 
+                "name":"The Complete 2022 JavaScript Course with Projects [Arabic]", 
+                "image":"../images/courses/javascript/1.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" , 
+                "studentNumber" : "234", 
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"7" , 
+                "name":"JavaScript for Kids: Code Your Own Games and Apps at Any Age", 
+                "image":"../images/courses/javascript/2.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" ,  
+                "studentNumber" : "234",
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"8" , 
+                "name":"The Complete 2022 Flutter & Dart Development Course [Arabic]", 
+                "image":"../images/courses/flutter/1.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" ,  
+                "studentNumber" : "234",
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"9" , 
+                "name":"Flutter Clean Architecture [2022] [Flutter 3] (In Arabic)", 
+                "image":"../images/courses/flutter/2.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" ,  
+                "studentNumber" : "234",
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"10" , 
+                "name":"The Complete Flutter Development Guide [2022 Edition]", 
+                "image":"../images/courses/flutter/3.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" , 
+                "studentNumber" : "234", 
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"11" , 
+                "name":"Learn C++ Programming -Beginner to Advance- Deep Dive in C++", 
+                "image":"../images/courses/cpp/1.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" ,  
+                "studentNumber" : "234",
+                "price":"10.99" , 
+                "sellingTag":"" 
+            },
+            {
+                "id":"12" , 
+                "name":"Beginning C++ Programming - From Beginner to Beyond", 
+                "image":"../images/courses/cpp/2.PNG",
+                "author":"Ibrahim Ramadan (FCI)",  
+                "rate" : "4.5" , 
+                "studentNumber" : "234",
+                "price":"10.99" , 
+                "sellingTag":"" 
+            }
+        ]
+    }
+}
