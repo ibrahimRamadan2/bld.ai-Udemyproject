@@ -1,5 +1,4 @@
 //-----------------------------    creating course Card using DOM...... -------------------------------------
-
 function getFUllStarIcon(e_className){
     let icon = document.createElement("i"); 
     icon.className=e_className ; 
