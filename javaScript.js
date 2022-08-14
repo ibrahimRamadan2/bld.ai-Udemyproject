@@ -1,43 +1,3 @@
- 
-// // this function will search in api and show course with 
-// async function getApiData(url , searchStr){
-//     searchStr=searchStr.toLowerCase() ; 
-//     let jsonData = await fetch(url) ;
-//     jsonData= await jsonData.json();
-//     let arr=[];
-//     let cnt=0 ; 
-//     if(searchStr === "")
-//         return jsonData.courses ; 
-
- 
-
- 
-
- 
-//const { brotliDecompressSync } = require("zlib");
-
-// const { count } = require("console");
-// const { stat } = require("fs");
-
-//const { doesNotMatch } = require("assert");
-
-//     for(let obj of jsonData.courses){
-//         courseName = obj.name.toLowerCase() ;
-//       // console.log(courseName+ " =>  "+ courseName.includes(searchStr)); 
-//         if(courseName.includes(searchStr) ==true)
-//             arr[cnt++] = obj ; 
-        
-//     } 
-//     // console.log(arr);
-//     // for(let obj of arr){
-//     //     console.log(obj.name);
-//     // } 
-//     return arr ; 
-// }
-// getApiData("http://127.0.0.1:3000/body", "python"); 
-////////////////////////////////////////////////////////////////////////
-
-
 //-----------------------------    creating course Card using DOM...... -------------------------------------
 
 function getFUllStarIcon(e_className){
@@ -108,8 +68,6 @@ function getImage(imgPath ,e_className  ){
     return img ; 
 }
 function getDiv(e_className , arrayOfElements){
-
- 
     let Mydiv = document.createElement("div") ; 
     Mydiv.className = e_className ; 
      
@@ -118,8 +76,6 @@ function getDiv(e_className , arrayOfElements){
     }
     return Mydiv ; 
 }
-
-  
 
 /////          just finished Ceating small elements Now letsBuild out cart ///////////////////////////////
 
@@ -150,61 +106,36 @@ function buildCourseCard (e_className ,courseName ,authorName  , rateNumber , st
                  card_rateNumber, ...card_arrayOfStars , card_studentNumber
              ];
 
-    let list = getDiv("ihiii" ,arrayOfRateElements);
- 
-     let card_rateAllDiv = getDiv("rate" , arrayOfRateElements , "raterate"); 
- 
-//     // course Price section 
+    let card_rateAllDiv = getDiv("rate" , arrayOfRateElements , "raterate"); 
+    // course Price section 
     let card_price = getPrice(price,"Price") ;  
+    
     // selling Status section 
     let card_sellingStatus = getsellingStatusForCouese(sellingStatus ,"best-seller") ;  
-
- 
+    
     let card_textDiv = getDiv("text-div" , [
         card_courseName, card_author ,card_rateAllDiv , 
         card_price , card_sellingStatus 
         ] );
 
-//     // -----------------------------------------------------------------------------------------------
-
     let bigCard =getDiv(e_className , [
         card_ImageDiv , 
         card_textDiv
         ]);
-    
      return bigCard ; 
 }
-
-
-
-
-  
-//buildCourseCard (e_className ,courseName ,authorName  , rateNumber , studentNumber , price , imgPath, sellingStatus)
-
-
-let myCard = buildCourseCard("course-card" , "learn Python yasta" , "ibrahim ramdan(FCI)" ,
- "4.6" ,"234" , "1233" , "images/courses/flutter/1.PNG" , "" );
  
- let cards = document.getElementById("courseCardSection"); 
- cards.innerHTML="";
-
- for(let i=0 ; i<6 ;i++){
-    let a =myCard.cloneNode(true) ; 
-    cards.appendChild(a); 
- }
 
 ///  fetch courses from API .........................................
 
 // // this function will search in api and show course with 
 function getCourseApiDataIntoCard(arrOfJsonCourses){ // convert course json data into (html&css) course card ....
-     
-    let arr=[]; let cnt=0 ; 
+let arr=[]; let cnt=0 ; 
     for(let i = 0; i<arrOfJsonCourses.length ; i++){
         let obj = arrOfJsonCourses[i] ; 
        let courseName =obj.name ,  id = obj.id  , image = obj.image  , authorName = obj.author , rateNumber =obj.rate;
        let price = obj.price , sellingStatus = obj.sellingTag , studentNumber = obj.studentNumber;   
        
-      
        let courseCard = buildCourseCard("course-card" , courseName , authorName , rateNumber ,studentNumber,price,
        image , sellingStatus );
        
@@ -213,7 +144,7 @@ function getCourseApiDataIntoCard(arrOfJsonCourses){ // convert course json data
     return arr;
 }
 
-async function getApiData(url , searchStr){
+async function getApiData(url , searchStr){     // fetch Data from API .
     searchStr=searchStr.toLowerCase() ; 
     let jsonData = await fetch(url) ;
     jsonData= await jsonData.json();
@@ -225,16 +156,9 @@ async function getApiData(url , searchStr){
     }
     for(let obj of jsonData.courses){
         courseName = obj.name.toLowerCase() ;
-      // console.log(courseName+ " =>  "+ courseName.includes(searchStr)); 
         if(courseName.includes(searchStr) ===true)
             arr[cnt++] = obj ; 
-        
     } 
-    // // console.log(arr);
-    // for(let obj of arr){
-    //     console.log(arr.length);
-    // } 
-     
     return arr ; 
 }
 function searchByCourseName( courseName){
@@ -251,8 +175,8 @@ function searchByCourseName( courseName){
     );  
 
 }
-searchByCourseName("");
-////////////////////////////////////////////////////////////////////////
+searchByCourseName("");     // inital fill courses section . 
+////////////////////////////////////////////////////////////////////////  
 
 // taking value from searchBox ... 
 let searchBox = document.getElementById("searchBox-id");
