@@ -16,7 +16,7 @@
                 "name":"The Complete Programming Fundamentals Course -Python[Arabic]", 
                 "image":"../images/courses/python/2.PNG",
                 "author":"Ibrahim Ramadan (FCI)",  
-                "rate" : "4.5" ,  
+                "rate" : "4.1" ,  
                 "studentNumber" : "234",
                 "price":"10.99" , 
                 "sellingTag":"" 
@@ -36,7 +36,7 @@
                 "name":" Data Science and Machine Learning Bootcamp with R", 
                 "image":"../images/courses/datascience/1.PNG",
                 "author":"Ibrahim Ramadan (FCI)",  
-                "rate" : "4.5" , 
+                "rate" : "2.0" , 
                 "studentNumber" : "234", 
                 "price":"10.99" , 
                 "sellingTag":"New" 
@@ -46,7 +46,7 @@
                 "name":"Data Science: Deep Learning and Neural Networks in Python", 
                 "image":"../images/courses/datascience/2.PNG",
                 "author":"Ibrahim Ramadan (FCI)",  
-                "rate" : "4.5" , 
+                "rate" : "5.0" , 
                 "studentNumber" : "234", 
                 "price":"10.99" , 
                 "sellingTag":"" 
@@ -56,7 +56,7 @@
                 "name":"The Complete 2022 JavaScript Course with Projects [Arabic]", 
                 "image":"../images/courses/javascript/1.PNG",
                 "author":"Ibrahim Ramadan (FCI)",  
-                "rate" : "4.5" , 
+                "rate" : "1.0" , 
                 "studentNumber" : "234", 
                 "price":"10.99" , 
                 "sellingTag":"" 
