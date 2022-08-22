@@ -142,9 +142,8 @@ let arr=[]; let cnt=0 ;
         let obj = arrOfJsonCourses[i] ; 
        let courseName =obj.name ,  id = obj.id  , image = obj.image  , authorName = obj.author , rateNumber =obj.rate;
        let price = obj.price , sellingStatus = obj.sellingTag , studentNumber = obj.studentNumber;   
-       let courseCard = buildCourseCard("course-card" , courseName , authorName , rateNumber ,studentNumber,price,
+       let courseCard = buildCourseCard("course-card swiper-slide" , courseName , authorName , rateNumber ,studentNumber,price,
        image , sellingStatus );
-       
        arr[cnt++] = courseCard ;
     }
     return arr;
@@ -168,11 +167,19 @@ async function getApiData(url , searchStr){     // fetch Data from API .
 }
 
 function searchByCourseName( courseName){
+    const slideButtons = document.querySelectorAll(".slide-btn"); 
     let arrOfSearchCoursesJson =  getApiData("http://localhost:3003/body", courseName).then(
         (response )=>{ // response => is an array of courses data from json  in  divs .. 
             arrOfSearchCoursesDivs=getCourseApiDataIntoCard(response);
-            console.log(arrOfSearchCoursesDivs);
-            let cards = document.getElementById("courseCardSection"); 
+            if(arrOfSearchCoursesDivs.length == 0){
+                for(let i=0; i<slideButtons.length; i++)
+                    slideButtons[i].classList.add("hide");
+                
+            }else {
+                for(let i=0; i<slideButtons.length; i++)
+                    slideButtons[i].classList.remove("hide");
+            }
+            let cards = document.querySelector(".swiper-wrapper-course-card"); 
             cards.innerHTML=""; 
             for(let i = 0; i<arrOfSearchCoursesDivs.length; i++){
                 cards.appendChild(arrOfSearchCoursesDivs[i]);
@@ -180,15 +187,74 @@ function searchByCourseName( courseName){
         }
     );  
 }
-searchByCourseName("");     // inital fill courses section . 
+
+document.querySelector(".apython").classList.add("mark"); 
+searchByCourseName("python");     // inital fill courses section . 
+
 ////////////////////////////////////////////////////////////////////////  
 
 // taking value from searchBox ... 
 const searchBox = document.getElementById("searchBox-id");
 searchBox.oninput= ()=>{searchByCourseName(searchBox.value)};
 
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////    slick slider \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
- 
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+     //
+     breakpoints: {
+        // when window width is >= 320px
+        450: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          slidesPerGroup: 2,
+        },
+        // when window width is >= 480px
+        // when window width is >= 640px
+        690: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+          slidesPerGroup: 3,
+        }, 
+        1000: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            slidesPerGroup: 4,
+        }, 
+        1200: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+            slidesPerGroup: 5,
+        }
+      }   ,
+   navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+////////////////// Courses header List \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+function refreshDiv(){
+    $( "courseCardSection" ).load(window.location.href + " #courseCardSection" );
+}
+
+const courseHeaderList = Array.from(document.querySelectorAll(".list-items")) ;
+for(let i = 0; i<courseHeaderList.length; i++){
+    const item = courseHeaderList[i]; 
+    courseHeaderList[i].onclick=function(){
+        for(let x = 0; x<courseHeaderList.length; x++)
+            courseHeaderList[x].classList.remove("mark");
+        item.classList.add("mark");
+        document.getElementById("course-list-header").innerHTML=`
+        Expand your career opportunities with ${item.innerHTML}`;
+        document.getElementById("btn-explore").innerHTML =`Explore ${this.innerHTML}`;
+        searchByCourseName(item.innerHTML);
+        refreshDiv(); 
+    }
+    
+}

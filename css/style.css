@@ -97,7 +97,7 @@ nav .btns {
  
 .main-courses .courses-h1-head p{
   word-break: break-all ;
-  font-size: 30px;
+  font-size: 35px;
   height: auto;
   font-family: 'Times New Roman';
   font-weight: 600;
@@ -105,7 +105,7 @@ nav .btns {
     line-height: 0;
 }
 .main-courses .courses .btn-explore{
-  width: 130px; 
+  width: auto; 
   height: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -181,11 +181,15 @@ nav .btn2 {
   margin-left: 5px;
 }
 .main-courses .course-list {
-  width: 860px;
+  width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
 }
+.main-courses .course-list .mark{
+  color: black;
+  background-color: white;
+ }
 .main-courses .course-list ul {
   padding: 0px;
   width: inherit;
@@ -203,6 +207,7 @@ nav .btn2 {
 }
 .main-courses .course-list div:hover {
   color: black;
+  cursor: pointer;
 }
 .main-courses .course-list ul .python {
   font-weight: 900;
@@ -218,6 +223,7 @@ nav .btn2 {
 .main-courses .courses h2 {
   font-family: Arial;
   font-size: 22px;
+  font-weight: bold;
 }
 .main-courses .courses p {
   font-size: 15px;
@@ -239,7 +245,7 @@ nav .btn2 {
   width: min(226px, 40vw);
   height: 240px;
   margin-bottom: 60px;
-  margin-right: 15px;
+   
 }
 .main-courses .courses .course-card .course-img {
   width: inherit;
@@ -248,14 +254,16 @@ nav .btn2 {
 }
 .main-courses .courses .course-card .text-div {
   margin-top: 10px;
-  width: 226px;
+  width: 100%;
   height: 120px;
+   
 }
 .main-courses .courses .course-card .course-img-div {
   width: inherit;
   height: 120px;
 }
 .main-courses .courses .course-card h3 {
+  word-break: break-all;
   font-family: "Franklin Gothic Medium";
   font-size: 17px;
 }
@@ -264,6 +272,8 @@ nav .btn2 {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  position: relative;
+  padding: 0px 35px;
 }
 /*///////////////////////////////////////           Slider Container          \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 .main-courses .courses .Cards .course-card .star-icon {
@@ -277,7 +287,7 @@ nav .btn2 {
 .main-courses .courses .Cards .course-card .student-num {
   font-size: 12px;
   margin-bottom: 8px;
-  margin-left: 4px;
+  /* margin-left: 4px; */
   color: rgb(106, 116, 119);
 }
 .main-courses .courses .Cards .course-card .author-name {
@@ -363,6 +373,54 @@ nav .btn2 {
   background-image: url(/images/topCategories/music.PNG);
 }
 
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  height: 45px  !important;
+  width: 45px !important;
+  border-radius: 44px;
+  border:1px solid rgb(126, 130, 133);
+  background-color: rgb(28, 29, 31);
+  
+}
+.swiper-button-next{
+  right: 1px !important;
+}
+.swiper-button-prev{
+  left: -2px !important;
+}
+.swiper-button-prev {
+  top: 26% !important;
+}
+ .swiper-button-next {
+  top: 25% !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 15px !important;
+  color: white;
+  font-weight: 600;
+}
+
+
+.swiper-button-next.hide , .swiper-button-prev.hide{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*            media Query        */
 
 @media (max-width: 1024px) {
@@ -423,7 +481,7 @@ nav .btn2 {
   .main-courses .courses .course-card {
     width: 260px;
     height: 240px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
   }
   .main-courses .courses .course-card .course-img-div {
     width: inherit;
@@ -432,9 +490,7 @@ nav .btn2 {
   .main-courses .courses .course-card h3 {
     font-size: 20px;
   }
-  .main-courses .courses .course-card .text-div {
-    width: 251px;
-  }
+   
   .main-courses .courses .courses-header {
     width: 77%;
   }
@@ -445,11 +501,11 @@ nav .btn2 {
     font-size: 24px;
   }
   .main-courses .course-list {
-    width: 860px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+      
   }
-
   .main-courses h1 {
     font-size: 38px;
   }
@@ -465,7 +521,7 @@ nav .btn2 {
 
 @media (max-width: 900px) {
   .main-courses .courses .course-card {
-    margin-right: calc(70vw - 516px);
+    /* margin-right: calc(70vw - 516px); */
   }
 }
 
@@ -496,9 +552,6 @@ nav .btn2 {
 @media (max-width: 800px) {
   .main-container {
     width: inherit;
-  }
-  .main-courses .course-list {
-    width: 860px;
   }
   nav #lang-icon,
   nav .udemy-categories,
@@ -547,27 +600,18 @@ nav .btn2 {
   }
 
   .main-courses .courses .course-card .course-img-div {
-    width: inherit;
+    width: 100%;
     height: 124px;
   }
 
   .main-courses .courses .course-card h3 {
     font-size: 15px;
   }
-
-  .main-courses .courses .course-card .text-div {
-    width: 221px;
-  }
-
-  .main-courses .courses .course-card .course-img-div {
-    width: 190px;
-    height: 110px;
-  }
-
+ 
   .main-courses .courses .course-card {
     width: 209px;
     height: 240px;
-    margin-right: 0.01%;
+    /* margin-right: 0.01%; */
   }
   .main-courses .courses .Cards {
     padding-right: 5px;
@@ -586,14 +630,14 @@ nav .btn2 {
   .main-courses .courses .course-card {
     width: 209px;
     height: 240px;
-    margin-right: calc(100vw - 614px);
+    /* margin-right: calc(100vw - 614px); */
   }
 }
 @media (max-width: 675px) {
   .main-courses .courses .course-card {
     width: 209px;
     height: 240px;
-    margin-right: calc(103vw - 614px);
+    /* margin-right: calc(103vw - 614px); */
   }
 }
 @media (min-width: 620px) {
@@ -606,7 +650,7 @@ nav .btn2 {
   .main-courses .courses .course-card {
     width: 209px;
     height: 240px;
-    margin-right: calc(108vw - 614px);
+    /* margin-right: calc(108vw - 614px); */
   }
   .main-container .head-card {
     display: none;
@@ -623,7 +667,7 @@ nav .btn2 {
   .main-courses .courses .course-card {
     width: 341px;
     height: 240px;
-    margin-right: calc(108vw - 614px);
+    /* margin-right: calc(108vw - 614px); */
   }
 
   .main-courses .courses .Cards {
@@ -637,9 +681,7 @@ nav .btn2 {
     width: inherit;
     height: 159px;
   }
-  .main-courses .courses .course-card .text-div {
-    width: inherit;
-  }
+   
   .main-courses .courses .course-card h3 {
     font-size: 18px;
   }
@@ -650,7 +692,7 @@ nav .btn2 {
   .main-courses .courses .course-card {
     width: calc(100vw - 210px);
     height: 242px;
-    margin-right: calc(108vw - 614px);
+    /* margin-right: calc(108vw - 614px); */
   }
   .main-courses .courses .course-card {
     width: 303px;
