@@ -3,12 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/8175910029.js"
       crossorigin="anonymous"
     ></script>
     <title>Udemy</title>
+    <link rel="stylesheet" href="css/all.min.css" />
   </head>
   <body>
     <!-- create navbar -->
@@ -35,27 +42,23 @@
           />
         </form>
       </div>
-      <!--  -->
       <div class="rightSide">
         <p class="navP udemy-business">Udemy Business</p>
         <p class="navP udemy-teach">Teach on Udemy</p>
-
         <i class="navp fa-solid fa-cart-shopping"></i>
-
         <div class="btns">
-          <button class="btn btn1 navBox">Log in</button>
-          <button class="btn btn2">Sign up</button>
+          <button class="btn-- btn1 navBox">Log in</button>
+          <button class="btn-- btn2">Sign up</button>
         </div>
         <div id="lang-icon" class="navBox">
           <i class="fa-solid fa-earth-americas"></i>
         </div>
       </div>
     </nav>
-
     <!-- Header -->
-    <div class="container">
+    <div class="main-container">
       <div class="Head-container">
-        <div class="card">
+        <div class="head-card">
           <p>
             <span class="welcome">New to Udemy?Lucky you.</span><br /><br />
             Courses start at E$169.99 Ger your new-student offer before it
@@ -63,10 +66,18 @@
           </p>
         </div>
       </div>
-
+      <div class="head-card-small">
+        <p>
+          <span class="welcome">New to Udemy?Lucky you.</span><br /><br />
+          Courses start at E$169.99 Ger your new-student offer before it
+          expires.
+        </p>
+      </div>
       <!-- Courses Section -->
       <div class="main-courses">
-        <h1>A broad selection of courses</h1>
+        <div class="courses-h1-head">
+          <p>A broad selection of courses</p>
+        </div>
         <br />
         <p>
           Choose from 185,000 online video courses with new additions published
@@ -82,10 +93,9 @@
           <div class="list-items aaws-certification">AWS Certification</div>
           <div class="list-items adrawing">Drawing</div>
         </div>
-
         <div class="courses">
           <!-- Course Section Header -->
-          <h2>Expand your career opportunities with Python</h2>
+          <h2 id="course-list-header">Expand your career opportunities with Python</h2>
           <div class="courses-header">
             <p>
               Take one of Udemy’s range of Python courses and learn how to code
@@ -96,17 +106,104 @@
               appeal to...
             </p>
           </div>
-          <button class="btn">Explore Python</button>
-
+          <button id="btn-explore" class="btn-- btn-explore">Explore Python</button>
           <!-- All Cards  -->
           <div id="courseCardSection" class="Cards">
-            
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper swiper-wrapper-course-card">
+               </div>
+            </div>
+            <div class="swiper-button-next slide-btn"></div>
+            <div class="swiper-button-prev slide-btn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <br /><br />
         </div>
-
-        <br /><br /> 
       </div>
+      <!-- Top categories Section -->
+      <section class="top-categories-sec">
+        <div class="top-cat-txt">
+          <p class="">Top categories</p>
+        </div>
+        <div
+          class="row row-cols-sm-1 row row-cols- row-cols-md-3 row-cols-lg-4 gx-4 gy-5 top-cat-box"
+        >
+          <div class="col">
+            <div class="col-box">
+              <div id="card-1" class="top-cat-card"></div>
+              <div>
+                <p>Design</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-box">
+              <div id="card-2" class="top-cat-card"></div>
+              <div>
+                <p>Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-box">
+              <div id="card-3" class="top-cat-card"></div>
+              <div>
+                <p>Marketing</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-box">
+              <div id="card-4" class="top-cat-card"></div>
+              <div>
+                <p>IT and Software</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-box">
+              <div id="card-5" class="top-cat-card"></div>
+              <div>
+                <p>Personal Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-box">
+              <div id="card-6" class="top-cat-card"></div>
+              <div>
+                <p>Business</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-box">
+              <div id="card-7" class="top-cat-card"></div>
+              <div>
+                <p>Photography</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="col-box">
+              <div id="card-8" class="top-cat-card"></div>
+              <div>
+                <p>Music</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <script src="javaScript.js"></script>
+    <br />
+    <br />
+    <br />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/javaScript.js"></script>
   </body>
 </html>
